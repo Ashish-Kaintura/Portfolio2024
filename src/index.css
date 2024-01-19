@@ -123,3 +123,15 @@
   border: 1px solid #6304df;
 }
 /* download  button  */
+
+/* YourComponent.css */
+
+.background-container {
+  background-image: url('../src/images/Project.png'); /* Use the correct path to the image */
+  background-size: cover; /* Adjust this based on your requirements */
+  background-position: center; /* Adjust this based on your requirements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Additional styles for your component content */
+}

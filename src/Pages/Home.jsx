@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Profile from "../images/myself.png";
+import Dominos from "../images/dominos.png";
+import AnimeQuiz from "../images/AnimeQuiz.png";
+import Sonrash from "../images/Sonrash.png";
+import { FaLink } from "react-icons/fa";
 export default function Home() {
   const downloadResume = () => {
     const resumeData = "'/resume/Ashish Kaintura Resume 2024-2.pdf';";
@@ -28,7 +32,7 @@ export default function Home() {
     "Front-End Developer",
     "Back-End Developer",
     "Full Stack Developer ",
-    "Designer",
+    "UX/UI Designer",
   ];
 
   useEffect(() => {
@@ -53,19 +57,20 @@ export default function Home() {
       clearInterval(typingInterval);
     };
   }, [index]);
-  //   useEffect(() => {
-  //     const typingInterval = setInterval(() => {
-  //       setVisibleChars((prevChars) =>
-  //         Math.min(texts[index].length, prevChars + 1)
-  //       );
-  //     }, 100);
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      setVisibleChars((prevChars) =>
+        Math.min(texts[index].length, prevChars + 1)
+      );
+    }, 100);
 
-  //     return () => {
-  //       clearInterval(typingInterval);
-  //     };
-  //   }, [index]);
+    return () => {
+      clearInterval(typingInterval);
+    };
+  }, [index]);
   return (
     <>
+      {/* #7918f7 */}
       <section>
         <div className="sm:h-[95vh] h-[80vh] relative">
           <div className="flex flex-wrap sm:justify-around justify-center sm:pt-32 pt-20 items-center p-5 ">
@@ -78,7 +83,6 @@ export default function Home() {
                 </h1>
               </div>
               <div className="wrapper py-4 sm:w-96 sm:h-44 h-20 ">
-                {/* <div className="static-txt text-8xl">A,</div> */}
                 <ul className="dynamic-txts">
                   <li>
                     <span className="sm:text-7xl text-3xl text-[#7918f7]">
@@ -137,8 +141,8 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="h-[50vh]">
-          <div className="flex justify-center sm:pt-20 pt-10">
+        <div className="sm:h-[80vh] h-[30vh] flex justify-center items-center pb-6 ">
+          <div className="flex justify-center sm:pt-12 pt-10">
             <div className="  py-5 px-5 rounded-lg block">
               <h1 className="text-center text-3xl font-semibold">
                 <span className=" text-[#7918f7]"> Download </span> my resume by
@@ -171,6 +175,251 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div className=" h-[70vh] relative flex items-center justify-center ">
+          <div>
+            <div className="absolute inset-0 z-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                  fill="#7918f7"
+                  fillOpacity="1"
+                  d="M0,224L720,0L1440,192L1440,0L720,0L0,0Z"
+                ></path>
+              </svg>
+            </div>
+            <div className="pt-20 text-center flex justify-center items-center gap-2">
+              <h1 className="text-5xl font-bold border-b-4 pb-2 border-[#7918f7]">
+                About Us
+              </h1>
+              <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-4"></div>
+            </div>
+            <div className=" justify-center pt-12 z-10 px-5 font-semibold">
+              <p className="z-10 px-5 text-center">
+                I am a Skilled developer experienced in HTML, CSS, JS, React.js,
+                MongoDB, Express.js, Node.js, MySQL, Tailwind CSS, Bootstrap,
+                and Next.js.
+              </p>
+              <p className="z-10 px-5 text-center">
+                I have also completed a Google UX Designing course from Coursera
+                and Possess Knowledge of other frameworks and language of PHP,
+                Spring, Hibernate, Android, Adobe XD, etc.
+              </p>
+            </div>
+            <div>
+              <div className="w-full h-40 flex items-center justify-center cursor-pointer">
+                <div className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-[whitesmoke] dark:bg-gray-700 dark:text-white dark:hover:text-gray-200 dark:shadow-none group">
+                  <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
+                  <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      fill="none"
+                      className="w-5 h-5 text-green-400"
+                    >
+                      <path
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      fill="none"
+                      className="w-5 h-5 text-green-400"
+                    >
+                      <path
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
+                    Know More
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="py-8">
+          <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
+            <h1 className="text-5xl font-bold border-b-4 pb-2 border-[#7918f7] ">
+              Projects
+            </h1>
+            <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
+          </div>
+          <div className="flex sm:justify-center md:justify-center lg:justify-evenly gap-5 flex-wrap px-5">
+            <div className="w-full sm:w-[480px] ">
+              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
+                <img
+                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
+                  src={Dominos}
+                  alt=""
+                />
+              </div>
+              <div className="ps-2 py-10">
+                <div className="flex gap-4 items-center">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Dominos Site (Modified){" "}
+                  </h1>
+                  <a
+                    className="font-semibold text-blue-700 "
+                    href="https://quiet-faloodeh-378fe9.netlify.app/
+
+"
+                  >
+                    <FaLink />
+                  </a>
+                </div>
+                <h2 className="text-lg font-semibold text-gray-700 pt-2">
+                  (It's a pizza-ordering website similar to Dominos, but with
+                  some modifications. This project was made with React JS and
+                  CSS.)
+                </h2>
+              </div>
+            </div>
+            <div className="w-full sm:w-[480px] ">
+              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
+                <img
+                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
+                  src={AnimeQuiz}
+                  alt=""
+                />
+              </div>
+              <div className="ps-2 py-10">
+                <div className="flex gap-4 items-center">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Kid Quiz Game
+                  </h1>
+                  <a
+                    className="font-semibold text-blue-700"
+                    href="https://ubiquitous-cuchufli-711b3b.netlify.app
+"
+                  >
+                    <FaLink />
+                  </a>
+                </div>
+                <h2 className="text-lg font-semibold text-gray-700 pt-2">
+                  ("It's an Anime Quiz game for kids that has been created using
+                  JavaScript, HTML, and CSS.")
+                </h2>
+              </div>
+            </div>
+            <div className="w-full sm:w-[480px] ">
+              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
+                <img
+                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
+                  src="https://res.cloudinary.com/dbxcernxw/image/upload/v1681220338/Mridul.Tech/Snaps/Netflix_clone_1_bi6xga.webp"
+                  alt=""
+                />
+              </div>
+              <div className="ps-2 py-10">
+                <div className="flex gap-4 items-center">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Netflix Clone
+                  </h1>
+                  <a
+                    className="font-semibold text-blue-700"
+                    href="https://github.com/Ashish-Kaintura/Netflix-clone-frontend
+"
+                  >
+                    <FaLink />
+                  </a>
+                </div>
+                <h2 className="text-lg font-semibold text-gray-700 pt-2">
+                  ( In this project, I used React.js for the front end or CSS
+                  for Styling, and Node.js, Express.js, and MongoDB for the back
+                  end. The project was deployed on GitHub and Render.)
+                </h2>
+              </div>
+            </div>
+            <div className="w-full sm:w-[480px] ">
+              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
+                <img
+                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
+                  src={Sonrash}
+                  alt=""
+                />
+              </div>
+              <div className="ps-2 py-10">
+                <div className="flex items-center gap-4">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Clothing Site{" "}
+                  </h1>
+                  <a
+                    className="font-semibold text-blue-700 "
+                    href="https://dashing-macaron-e493a8.netlify.app/
+"
+                  >
+                    <FaLink />
+                  </a>
+                </div>
+                <h2 className="text-lg font-semibold text-gray-700 pt-2">
+                  (This is a Designer Clothing Site that was created using HTML,
+                  CSS, and JavaScript)
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="w-full h-40 flex items-center justify-center cursor-pointer">
+              <div className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-[whitesmoke] dark:bg-gray-700 dark:text-white dark:hover:text-gray-200 dark:shadow-none group">
+                <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
+                <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    className="w-5 h-5 text-green-400"
+                  >
+                    <path
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      strokeWidth="2"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    className="w-5 h-5 text-green-400"
+                  >
+                    <path
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      strokeWidth="2"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
+                  Know More
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="h-[100vh]">
+
         </div>
       </section>
     </>
