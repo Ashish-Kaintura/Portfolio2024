@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
 import logo from "../Logo/ashish-kaintura-high-resolution-logo-black-transparent.png";
 export default function NavBar() {
   return (
@@ -24,16 +26,21 @@ export default function NavBar() {
             <NavLink to="/Projects">Projects</NavLink>
           </li>
           <li>
-            <NavLink to="/Projects">Resume</NavLink>
+            <NavLink to="/Resume">Resume</NavLink>
           </li>
         </ul>
-        <ul className=" flex gap-5">
-          <li>
+        <ul className=" flex gap-5 items-center justify-center">
+          {/* <li>
             <NavLink to="/Blog">Blog</NavLink>
-          </li>
+          </li> */}
 
           <li>
-            <NavLink to="/Comtact">Contact</NavLink>
+            <NavLink
+              className="flex justify-center items-center text-4xl hover:scale-75 transition-all duration-150 ease-in-out"
+              to="/Comtact"
+            >
+              <IoChatbubbleEllipsesSharp />
+            </NavLink>
           </li>
         </ul>
       </nav>

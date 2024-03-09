@@ -1,9 +1,26 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Profile from "../images/myself.png";
 import Dominos from "../images/dominos.png";
 import AnimeQuiz from "../images/AnimeQuiz.png";
 import Sonrash from "../images/Sonrash.png";
 import { FaLink } from "react-icons/fa";
+import { AiFillHtml5 } from "react-icons/ai";
+import { FaCss3Alt } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
+import {  RiReactjsLine } from "react-icons/ri";
+import { SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { DiBootstrap, DiMongodb, DiPhp } from "react-icons/di";
+import { SiMysql } from "react-icons/si";
+
+import Responsive from "../icon/responsive-design.png";
+import figma from "../icon/figma.png";
+import sketching from "../icon/sketching.png";
+import Uipng from "../icon/UIUX.png";
+import NavBar from "../Componenets/NavBar";
 export default function Home() {
   const downloadResume = () => {
     const resumeData = "'/resume/Ashish Kaintura Resume 2024-2.pdf';";
@@ -57,20 +74,21 @@ export default function Home() {
       clearInterval(typingInterval);
     };
   }, [index]);
-  useEffect(() => {
-    const typingInterval = setInterval(() => {
-      setVisibleChars((prevChars) =>
-        Math.min(texts[index].length, prevChars + 1)
-      );
-    }, 100);
+  // useEffect(() => {
+  //   const typingInterval = setInterval(() => {
+  //     setVisibleChars((prevChars) =>
+  //       Math.min(texts[index].length, prevChars + 1)
+  //     );
+  //   }, 100);
 
-    return () => {
-      clearInterval(typingInterval);
-    };
-  }, [index]);
+  //   return () => {
+  //     clearInterval(typingInterval);
+  //   };
+  // }, [index]);
   return (
     <>
       {/* #7918f7 */}
+      <NavBar/>
       <section>
         <div className="sm:h-[95vh] h-[80vh] relative">
           <div className="flex flex-wrap sm:justify-around justify-center sm:pt-32 pt-20 items-center p-5 ">
@@ -418,8 +436,266 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="h-[100vh]">
-
+        <div className="h-[100vh] relative items-center justify-center flex ">
+          <div className=" absolute top-0 inset-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path
+                fill="#7918f7"
+                fillOpacity="1"
+                d="M0,320L48,282.7C96,245,192,171,288,117.3C384,64,480,32,576,16C672,0,768,0,864,0C960,0,1056,0,1152,21.3C1248,43,1344,85,1392,106.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+              ></path>
+            </svg>
+          </div>
+          <div className=" absolute top-[35%] right-28 lg:flex  md:flex sm:flex hidden">
+            <svg
+              className="w-96 opacity-85"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#7918F7"
+                d="M45.9,-26.8C56.6,-8.1,60.2,14.3,51.3,32C42.5,49.6,21.3,62.3,-0.2,62.5C-21.7,62.6,-43.5,50.1,-57,29.8C-70.4,9.5,-75.7,-18.6,-64.8,-37.4C-53.9,-56.2,-27,-65.6,-4.6,-63C17.7,-60.3,35.3,-45.4,45.9,-26.8Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+          <div>
+            <div className="pt-20 pb-10  flex ps-5 items-center gap-2 text-center justify-center z-10">
+              <h1 className="text-5xl text-gray-800  font-bold border-b-4 pb-2 border-[#7918f7] z-10 ">
+                Experience
+              </h1>
+              <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
+            </div>
+            <div className="flex justify-center ">
+              <div className="flex justify-between gap-5">
+                <div className="h-96 w-1 rounded-sm bg-[#7918f7] "></div>
+                <div className="flex sm:gap-6 gap-4">
+                  <div>
+                    <h1 className=" font-semibold text-gray-800 text-2xl">
+                      Risezonic :
+                    </h1>
+                    <h1 className=" font-semibold text-gray-800 text-sm">
+                      India, New Delhi
+                    </h1>
+                  </div>
+                  <div className="z-10">
+                    <h1 className=" font-semibold text-gray-800 sm:text-lg md:text-xl lg:text-2xl">
+                      Front End Web Developer
+                    </h1>
+                    <h1 className=" font-semibold text-gray-800 text-sm">
+                      2023 - Now
+                    </h1>
+                    <div className="z-10">
+                      <p className="text-sm z-10">
+                        As a Front End Web Developer at Risezonic, I created{" "}
+                        <br />
+                        visually appealing and user-friendly websites. I <br />
+                        collaborated with the design and development teams to{" "}
+                        <br />
+                        ensure seamless integration of front-end and back-end{" "}
+                        <br />
+                        technologies. Leveraging my HTML, CSS, JavaScript, and{" "}
+                        <br />
+                        ReactJs, etc knowledge, I successfully delivered <br />
+                        projects that met client's expectations.
+                      </p>
+                    </div>
+                    <div className="pt-4 gap-4">
+                      <li className="sm:text-xl font-semibold text-gray-800">
+                        Developed responsive websites
+                      </li>
+                      <li className="sm:text-xl font-semibold text-gray-800">
+                        Deployment of Websites Management of cPane
+                      </li>
+                      <li className="sm:text-xl font-semibold text-gray-800">
+                        Ensured clean, valid HTML and CSS markup conforming to
+                        industry standards.
+                      </li>
+                      <li className="sm:text-xl font-semibold text-gray-800">
+                        Brought mock-ups to life with HTML, CSS, and JavaScript.
+                      </li>
+                      <li className="sm:text-xl font-semibold text-gray-800">
+                        Participated in design reviews ensuring consistency
+                        between design intent and implementation
+                      </li>
+                      <li className="sm:text-xl font-semibold text-gray-800">
+                        Created successful websites that met requirements for
+                        objectives such as load speed and design.
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="py-5">
+          <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
+            <h1 className="text-7xl font-bold border-b-4 pb-2 border-[#7918f7] ">
+              Skills
+            </h1>
+            <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
+          </div>
+          <div className="px-5">
+            <h1 className=" font-semibold text-4xl text-gray-700 pb-6">
+              Web Desgin
+            </h1>
+            <div className="flex flex-wrap overflow-hidden justify-evenly p-5 gap-4">
+              <div className="flex items-center gap-2 text-2xl">
+                <h1>
+                  <img className="w-8" src={Uipng} alt="" />
+                </h1>
+                <h1 className=" font-semibold ">UI/UX Design</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1>
+                  <img className="w-8" src={Responsive} alt="" />
+                </h1>
+                <h1 className=" font-semibold ">Responsive Design</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1>
+                  <img className="w-8" src={sketching} alt="" />
+                </h1>
+                <h1 className=" font-semibold ">Wireframing</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1>
+                  <img className="w-8" src={figma} alt="" />
+                </h1>
+                <h1 className=" font-semibold ">Figma</h1>
+              </div>
+            </div>
+          </div>
+          <div className="px-5 py-6">
+            <h1 className=" font-semibold text-4xl text-gray-700 pb-6">
+              Front-End
+            </h1>
+            <div className="flex flex-wrap gap-4 overflow-hidden justify-around p-5 ">
+              <div className="flex items-center gap-2 text-2xl">
+                <h1>
+                  <AiFillHtml5 className=" text-orange-600" />
+                </h1>
+                <h1 className=" font-semibold  ">HTML</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1>
+                  <IoLogoJavascript className=" text-yellow-500" />
+                </h1>
+                <h1 className=" font-semibold  ">Javascript</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className=" text-blue-500">
+                  <FaCss3Alt />
+                </h1>
+                <h1 className=" font-semibold  ">CSS3</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className=" text-indigo-800">
+                  <RiReactjsLine />
+                </h1>
+                <h1 className=" font-semibold  ">ReactJS</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className="text-blue-400">
+                  <SiTailwindcss />
+                </h1>
+                <h1 className=" font-semibold  ">Tailwind Css</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className=" text-indigo-700">
+                  <DiBootstrap />
+                </h1>
+                <h1 className=" font-semibold  ">Bootstrape Css</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1>
+                  <AiFillHtml5 />
+                </h1>
+                <h1 className=" font-semibold  ">Gsap</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className="f text-blue-800">
+                  <SiNextdotjs />
+                </h1>
+                <h1 className=" font-semibold  ">Next.js</h1>
+              </div>
+            </div>
+          </div>
+          <div className="px-5">
+            <h1 className=" font-semibold text-4xl text-gray-700 pb-6">
+              Back-End
+            </h1>
+            <div className="flex flex-wrap gap-4 overflow-hidden justify-around p-5 ">
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className="text-green-800 text-4xl">
+                  <IoLogoNodejs />
+                </h1>
+                <h1 className=" font-semibold  ">NodeJs</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className="text-yellow-500">
+                  <SiExpress />
+                </h1>
+                <h1 className=" font-semibold  ">ExpressJs</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className=" text-green-700">
+                  <DiMongodb />
+                </h1>
+                <h1 className=" font-semibold  ">MongoDb</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className=" text-blue-700 text-4xl">
+                  <SiMysql />
+                </h1>
+                <h1 className=" font-semibold  ">MySQl</h1>
+              </div>
+              <div className="flex items-center gap-2 text-2xl">
+                <h1 className=" text-blue-700 text-5xl">
+                  <DiPhp />
+                </h1>
+                <h1 className=" font-semibold  ">PHP</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="p-8">
+          <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
+            <h1 className="text-7xl font-bold border-b-4 pb-2 border-[#7918f7] ">
+              My Story
+            </h1>
+            <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
+          </div>
+          <div className="p-5">
+            <p className=" font-normal text-xl pb-5">
+              My Journey as a Front-End Developer at Risezonic (2023 - Present)
+              In my role as a Front-End Web Developer at Risezonic since 2023,
+              I've been crafting immersive digital experiences that go beyond
+              mere code
+            </p>
+            <p className=" font-normal text-xl pb-5">
+              Collaborating closely with design and development teams, I've
+              seamlessly integrated front-end and back-end technologies to bring
+              innovative websites to life. With a toolkit comprising HTML, CSS,
+              JavaScript, and ReactJs, I've not only met but exceeded client
+              expectations in delivering visually stunning and highly functional
+              projects
+            </p>
+            <p className=" font-normal text-xl pb-5">
+              As a Front-End Web Developer at Risezonic, I left an indelible
+              mark on every project I undertook. From creating captivating user
+              interfaces to ensuring the seamless integration of front-end and
+              back-end technologies, my dedication to excellence was unwavering.
+              My journey is a testament to my commitment to staying at the
+              forefront of web development and delivering exceptional digital
+              experiences that elevate the standards of the industry.
+            </p>
+          </div>
         </div>
       </section>
     </>

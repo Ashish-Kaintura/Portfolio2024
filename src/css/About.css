@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    animation: scrollAnimation 28s linear infinite;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content2 {
+    display: flex;
+    animation: scrollAnimationright 25s linear infinite;
+}
+
+.content2::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes scrollAnimation {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollAnimationright {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.item {
+    display: flex;
+    padding: 10px;
+    /* margin-right: 20px; */
+    width: 10rem;
+    text-align: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* //// */
