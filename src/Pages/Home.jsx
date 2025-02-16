@@ -9,7 +9,7 @@ import { FaLink } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
-import {  RiReactjsLine } from "react-icons/ri";
+import { RiReactjsLine } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
@@ -21,6 +21,7 @@ import figma from "../icon/figma.png";
 import sketching from "../icon/sketching.png";
 import Uipng from "../icon/UIUX.png";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 export default function Home() {
   const downloadResume = () => {
     const resumeData = "'/resume/Ashish Kaintura Resume 2024-2.pdf';";
@@ -88,7 +89,7 @@ export default function Home() {
   return (
     <>
       {/* #7918f7 */}
-      <NavBar/>
+      <NavBar />
       <section>
         <div className="sm:h-[95vh] h-[80vh] relative">
           <div className="flex flex-wrap sm:justify-around justify-center sm:pt-32 pt-20 items-center p-5 ">
@@ -96,8 +97,10 @@ export default function Home() {
               <div>
                 <h1 className="text-xl font-semibold">
                   {" "}
-                  <span className="text-[#7918f7] font-semibold ">Hey,</span> I'm
-                  Ashish 👋🏻{" "}
+                  <span className="text-[#7918f7] font-semibold ">
+                    Hey,
+                  </span>{" "}
+                  I'm Ashish 👋🏻{" "}
                 </h1>
               </div>
               <div className="wrapper py-4 sm:w-96 sm:h-44 h-20 ">
@@ -114,16 +117,18 @@ export default function Home() {
                 <p> beautiful websites your users will love.</p>
               </div>
               <div className="flex  gap-5 pt-5 ">
-                <button
-                  className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-85"
-                  style={{
-                    boxShadow:
-                      "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
-                  }}
-                >
-                  {" "}
-                  Get In Touch{" "}
-                </button>
+                <Link to="/contact">
+                  <button
+                    className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-85"
+                    style={{
+                      boxShadow:
+                        "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+                    }}
+                  >
+                    {" "}
+                    Get In Touch{" "}
+                  </button>
+                </Link>
                 <button
                   className="px-5 py-3 rounded-2xl hover:opacity-85"
                   style={{
@@ -215,14 +220,15 @@ export default function Home() {
             </div>
             <div className=" justify-center pt-12 z-10 px-5 font-semibold">
               <p className="z-10 px-5 text-center">
-                I am a Skilled developer experienced in HTML, CSS, JS, React.js,
-                MongoDB, Express.js, Node.js, MySQL, Tailwind CSS, Bootstrap,
-                and Next.js.
+                As a Front-End Web Developer at Risezonic, I created visually
+                appealing and user-friendly websites. I collaborated with the
+                design and development teams to ensure seamless integration of
+                front-end and as well as little back-end technologies.
               </p>
               <p className="z-10 px-5 text-center">
-                I have also completed a Google UX Designing course from Coursera
-                and Possess Knowledge of other frameworks and language of PHP,
-                Spring, Hibernate, Android, Adobe XD, etc.
+                . Leveraging my HTML, CSS, JavaScript, and React JS, Next JS,
+                NodeJS, Firebase, MongoDb, MySQL, etc. knowledge, I successfully
+                delivered projects that met client's expectations.
               </p>
             </div>
             <div>
@@ -261,9 +267,12 @@ export default function Home() {
                       ></path>
                     </svg>
                   </span>
-                  <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-                    Know More
-                  </span>
+                  <Link to="/about">
+                    {" "}
+                    <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
+                      Know More
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -427,9 +436,11 @@ export default function Home() {
                     ></path>
                   </svg>
                 </span>
-                <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-                  Know More
-                </span>
+                <Link to="/Projects">
+                  <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
+                    Know More
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
@@ -505,7 +516,7 @@ export default function Home() {
                         Developed responsive websites
                       </li>
                       <li className="sm:text-xl font-semibold text-gray-800">
-                        Deployment of Websites Management of cPane
+                        Deployment of Websites Management of cPanel
                       </li>
                       <li className="sm:text-xl font-semibold text-gray-800">
                         Ensured clean, valid HTML and CSS markup conforming to

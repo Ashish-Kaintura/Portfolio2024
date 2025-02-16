@@ -7,6 +7,7 @@ import Footer from "./Pages/Footer";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
+import Resume from "./Pages/Resume";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/Resume" element={<Resume/>} />
           {/* <Route path="*" element={<h1>Error</h1>} /> */}
         </Routes>
         <Footer />
