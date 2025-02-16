@@ -20,7 +20,7 @@ import Responsive from "../icon/responsive-design.png";
 import figma from "../icon/figma.png";
 import sketching from "../icon/sketching.png";
 import Uipng from "../icon/UIUX.png";
-import NavBar from "../Componenets/NavBar";
+import NavBar from "../components/NavBar";
 export default function Home() {
   const downloadResume = () => {
     const resumeData = "'/resume/Ashish Kaintura Resume 2024-2.pdf';";
@@ -96,7 +96,7 @@ export default function Home() {
               <div>
                 <h1 className="text-xl font-semibold">
                   {" "}
-                  <span className="text-[#7918f7] font-semibold">Hey,</span> I'm
+                  <span className="text-[#7918f7] font-semibold ">Hey,</span> I'm
                   Ashish 👋🏻{" "}
                 </h1>
               </div>
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:flex hidden absolute sm:top-[45%]  sm:left-[35%]  bg-[#7918f7] sm:w-64 w-48 sm:h-64 h-48 rounded-full z-0  opacity-95 "></div>
-            <div className=" absolute sm:top-[-5%] top-[-18%] sm:left-[-8%] left-[-8%] bg-[#7918f7] sm:w-64 w-48 sm:h-64 h-48 rounded-full z-0"></div>
+            <div className="sm:flex hidden absolute sm:top-[-5%] top-[-18%] sm:left-[-8%] left-[-8%] bg-[#7918f7] sm:w-64 w-48 sm:h-64 h-48 rounded-full z-0"></div>
             <div className="rounded-full sm:border-2 p-8  md:flex  justify-center items-center hover:border-0 ">
               <div>
                 <div

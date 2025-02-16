@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import NavBar from "../Componenets/NavBar";
+import NavBar from "../components/NavBar";
 import { useRef, useEffect, useState } from "react";
 import "../css/About.css";
 import { CiStar } from "react-icons/ci";
