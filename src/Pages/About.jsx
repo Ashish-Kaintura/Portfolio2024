@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import { useRef, useEffect, useState } from "react";
 import "../css/About.css";
 import { CiStar } from "react-icons/ci";
+import Form from "../components/form";
 export default function About() {
   const sliderRef = useRef(null);
   // Function to handle scrolling the slider towards the right
@@ -239,6 +240,7 @@ export default function About() {
             </div>
           </div>
         </section>
+        <Form/>
         <section className="mb-4 px-6 justify-center">
           <div className=" p-5 ">
             <div>

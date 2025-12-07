@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 export default function Resume() {
   return (
     <>
-    <NavBar/>
+      <NavBar />
       <div className="max-w-4xl mx-auto p-5">
         <h1 className="text-3xl font-bold text-center mb-5">Ashish Kaintura</h1>
         <p className="text-center text-gray-700">
@@ -17,13 +17,13 @@ export default function Resume() {
         </p>
         <div className="flex justify-center space-x-5 mt-3">
           <a
-            href="LINKEDIN"
+            href="https://www.linkedin.com/in/ashish-kaintura30?"
             className="text-blue-600 font-semibold hover:underline"
           >
             LinkedIn
           </a>
           <a
-            href="GITHUB"
+            href="https://github.com/Ashish-Kaintura  "
             className="text-blue-600 font-semibold hover:underline"
           >
             GitHub
@@ -33,7 +33,7 @@ export default function Resume() {
         {/* Download Button */}
         <div className="flex justify-center my-5">
           <a
-            href="/resume/Ashish%20Kaintura%20Resume%202024-2.pdf"
+            href="/resume/Ashish%20Kaintura%20Resume%202025.docx"
             download
             className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition"
           >
@@ -85,10 +85,6 @@ export default function Resume() {
               GNIIT in Cloud and Mobile Software Engineering - NIIT
             </h3>
             <p className="text-gray-600">Dec 2019 - 2024</p>
-            <p className="text-gray-700">
-              Relevant Coursework: OOP, Databases, DSA, OS, Networks, ML, Data
-              Mining.
-            </p>
           </div>
           <div className="mt-3">
             <h3 className="text-xl font-semibold">B.Com - IGNOU</h3>
@@ -114,7 +110,7 @@ export default function Resume() {
               Google UX/UI Certificate - India, New Delhi
             </h3>
             <a
-              href="CERTIFICATE_LINK"
+              href="https://coursera.org/share/a66951367ba6d48d88c57eb91e638413"
               className="text-blue-600 hover:underline"
             >
               View Certificate

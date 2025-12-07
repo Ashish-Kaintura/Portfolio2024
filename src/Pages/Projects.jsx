@@ -1,37 +1,135 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import NavBar from "../components/NavBar";
-import dominos from "../ProjectsImg/Dominos.png";
+import punarnava from "../images/punarnava.png";
 import Quiz from "../ProjectsImg/quizegame.png";
 import Sonarash from "../ProjectsImg/sonrash.png";
 import netflix from "../ProjectsImg/netfix.png";
+import risezonictravel from "../images/risezonictravel.png";
+import acart from "../images/acart.png";
+import malani from "../images/malanimarble.png";
+import multitectools from "../images/multitec.png";
+import frozit from "../images/frozit.png";
+import loopandcut from "../images/loopandcut.png";
+import goldvine from "../images/goldvine.png";
+import lookflydesk from "../images/lookflydesk.png";
+import jandsinsurance from "../images/jandsinsurance.png";
+import skyworldtourcorp from "../images/skyworldtour.png";
+import veneasy from "../images/veneasy.png";
+import risezonic from "../images/risezonic.png";
+
+
 import "../css/Projects.css";
 
 export default function Projects() {
   const projects = [
     {
-      title: "Dominos Site Clone",
-      img: dominos,
+      title: "Punarnava",
+      img: punarnava,
       url: "https://quiet-faloodeh-378fe9.netlify.app/",
-      technologies: ["React JS", "CSS", "Bootstrap CSS"],
+      technologies: ["Html", "CSS", "Tailiwind CSS", "JavaScript"],
     },
     {
-      title: "Quiz Game",
-      img: Quiz,
-      url: "https://quiet-faloodeh-378fe9.netlify.app/",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      title: "Risezonic Travel",
+      img: risezonictravel,
+      url: "https://www.risezonictravel.com/",
+      technologies: ["React Js", "Tailwind CSS", "Email.js"],
     },
     {
-      title: "Clothing Site",
-      img: Sonarash,
-      url: "https://quiet-faloodeh-378fe9.netlify.app/",
-      technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      title: "Acart",
+      img: acart,
+      url: "https://akartbyashish.netlify.app/",
+      technologies: ["Vite Js", "Tailwind CSS", "Firebase", "Razorpay"],
     },
     {
       title: "Netflix Clone 2021-22",
       img: netflix,
       url: "https://ashish-kaintura.github.io/Netflix-clone-frontend/frontpage",
       technologies: ["React JS", "MongoDB", "Node JS", "Express JS"],
+    },
+    {
+      title: "Malnai Marble",
+      img: malani,
+      url: "https://malanimarbles.com/",
+      technologies: ["HTML", "Tailwind Css", "EmailJS"],
+    },
+    {
+      title: "Multitec Tools",
+      img: multitectools,
+      url: "https://multitectools.com/",
+      technologies: ["React JS", "Tailwind Css", "EmailJS"],
+    },
+    {
+      title: "Frozit",
+      img: frozit,
+      url: "https://www.frozit.in/",
+      technologies: ["HTML", "Bootstrap css ", "CSS", "JavaScript"],
+    },
+    {
+      title: "Loop&Cut",
+      img: loopandcut,
+      url: "https://www.loopandcut.in/",
+      technologies: [
+        "React JS",
+        "Tailwind CSS",
+        "Firebase",
+        "node",
+        "Express JS",
+      ],
+    },
+    {
+      title: "GoldVine",
+      img: goldvine,
+      url: "https://www.thegoldvine.com/?srsltid=AfmBOooAik2SALIDYbv9MStVxFBYklEXW_zMsT7gWCd7CTv0TkvsbqTh",
+      technologies: ["Shopify"],
+    },
+    {
+      title: "LookflyDesk",
+      img: lookflydesk,
+      url: "https://lookflydesk.com/",
+      technologies: ["HTML", "Tailwind CSS", "MySQL"],
+    },
+    {
+      title: "J&S Insurance",
+      img: jandsinsurance,
+      url: "https://www.jsinsur.com/",
+      technologies: [
+        "React JS",
+        "Tailwind CSS",
+        "Node JS",
+        "Express JS",
+        "MySQL",
+      ],
+    },
+    {
+      title: "SkyWoldTourCrop",
+      img: skyworldtourcorp,
+      url: "https://skyworldtourcorp.com/",
+      technologies: ["React JS", "Tailwind CSS"],
+    },
+    {
+      title: "Veneasy",
+      img: veneasy,
+      url: "https://veneasy.in/",
+      technologies: ["WordPress"],
+    },
+    {
+      title: "SonrashbySona",
+      img: Sonarash,
+      url: "http://sonrashbysona.com/",
+      technologies: ["React JS", "tailwind CSS"],
+    },
+    {
+      title: "WeatherApp",
+      img: "https://help.apple.com/assets/6758C14AEA2BBD75D7023772/6758C150890517C4260090D6/en_US/eeb56c882953c4c17bb28992c1db31c1.png",
+      url: "#",
+      technologies: ["React Native Expo", "tailwind CSS"],
+    },
+    {
+      title: "Risezonic",
+      img: risezonic,
+      url: "https://www.risezonic.com/",
+      technologies: ["HTML", "tailwind CSS", "JavaScript", "GSAP"],
     },
   ];
 
@@ -75,12 +173,25 @@ export default function Projects() {
         <section className="sm:px-20 pb-20">
           <div className="flex flex-wrap sm:justify-evenly justify-center gap-y-6">
             {projects.map((project, index) => (
-              <div key={index} className="max-w-[310px] sm:h-[490px] mx-auto sm:p-1 p-4">
+              <div
+                key={index}
+                className="max-w-[310px] sm:h-[490px] mx-auto sm:p-1 p-4"
+              >
                 <div className="bg-white shadow-md border-2 border-gray-700 rounded-lg sm:max-w-m max-w-lg mb-5 overflow-hidden border-b-red-600 border-b-4">
                   {/* Project Image */}
                   <div className="image-wrap">
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      <img src={project.img} alt={project.title} className="w-full object-cover" />
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      
+                    >
+                      <img
+                        src={project.img}
+                        alt={project.title}
+                        className="w-full object-cover"
+                        loading="lazy"
+                      />
                     </a>
                   </div>
 
@@ -106,7 +217,11 @@ export default function Projects() {
 
                   {/* Visit Button */}
                   <div className="py-4 flex justify-center shadow-inner">
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button className="px-4 py-1 rounded-xl bg-red-800 text-white transition hover:bg-red-900">
                         Visit
                       </button>

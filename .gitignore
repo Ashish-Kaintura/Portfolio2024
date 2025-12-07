@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-
+#  https://script.google.com/macros/s/AKfycbzIVqs-dqu5gANgZGSWRzasqfKYa7t4Hsez0LIkfUzZPbWmCFYTCd3pjolp7TvL9RPVOA/exec
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

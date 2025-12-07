@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/Project"} className="hover:text-blue-600">
+            <NavLink to={"/Projects"} className="hover:text-blue-600">
               Projects
             </NavLink>
           </li>
@@ -35,7 +35,7 @@ export default function Footer() {
         <ul className="flex justify-center gap-5 text-2xl">
           <li>
             <a
-              href="https://github.com/"
+              href="https://github.com/Ashish-Kaintura"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-600"
@@ -45,7 +45,7 @@ export default function Footer() {
           </li>
           <li>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/ashish-kaintura30?"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-700"
@@ -73,12 +73,17 @@ export default function Footer() {
             Interested in working together?
           </h1>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
-            <button className="px-5 py-3 border-2 border-gray-500 rounded-lg hover:bg-gray-500 hover:text-white transition">
-              Get In Touch
-            </button>
-            <button className="px-5 py-3 border-2 border-gray-500 rounded-lg hover:bg-gray-500 hover:text-white transition">
-              Contact Us
-            </button>
+            <a href="tel:+8076979141">
+              <button className="px-5 py-3 border-2 border-gray-500 rounded-lg hover:bg-gray-500 hover:text-white transition">
+                Get In Touch
+              </button>
+            </a>
+            <Link to="/contact">
+              {" "}
+              <button className="px-5 py-3 border-2 border-gray-500 rounded-lg hover:bg-gray-500 hover:text-white transition">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
 

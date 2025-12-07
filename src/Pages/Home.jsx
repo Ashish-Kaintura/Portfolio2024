@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Profile from "../images/myself.png";
-import Dominos from "../images/dominos.png";
-import AnimeQuiz from "../images/AnimeQuiz.png";
+import punarnava from "../images/punarnava.png";
+import loopandcut from "../images/loopandcut.png";
 import Sonrash from "../images/Sonrash.png";
 import { FaLink } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -22,16 +22,18 @@ import sketching from "../icon/sketching.png";
 import Uipng from "../icon/UIUX.png";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
+import ProjectsSection from "../components/Projectsection";
+import ExperienceSection from "../components/ExperienceSection";
 export default function Home() {
   const downloadResume = () => {
-    const resumeData = "'/resume/Ashish Kaintura Resume 2024-2.pdf';";
+    const resumeData = "'/resume/Ashish Kaintura Resume 2025.docx';";
     try {
-      const blob = new Blob([resumeData], { type: "application/pdf" });
+      const blob = new Blob([resumeData], { type: "application/dox" });
       const url = URL.createObjectURL(blob);
 
       const a = document.createElement("a");
       a.href = url;
-      a.download = "Ashish Kainturaresume .pdf";
+      a.download = "Ashish Kainturaresume .docx";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -129,20 +131,23 @@ export default function Home() {
                     Get In Touch{" "}
                   </button>
                 </Link>
-                <button
-                  className="px-5 py-3 rounded-2xl hover:opacity-85"
-                  style={{
-                    boxShadow:
-                      "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
-                  }}
-                >
+                <Link to="/Projects">
                   {" "}
-                  Borwse Project{" "}
-                </button>
+                  <button
+                    className="px-5 py-3 rounded-2xl hover:opacity-85"
+                    style={{
+                      boxShadow:
+                        "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+                    }}
+                  >
+                    {" "}
+                    Borwse Project{" "}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="md:flex hidden absolute sm:top-[45%]  sm:left-[35%]  bg-[#7918f7] sm:w-64 w-48 sm:h-64 h-48 rounded-full z-0  opacity-95 "></div>
-            <div className="sm:flex hidden absolute sm:top-[-5%] top-[-18%] sm:left-[-8%] left-[-8%] bg-[#7918f7] sm:w-64 w-48 sm:h-64 h-48 rounded-full z-0"></div>
+            <div className="sm:flex hidden absolute sm:top-[0%] top-[-18%] sm:left-[-8%] left-[-8%] bg-[#7918f7] sm:w-44 w-48 sm:h-44 h-48 rounded-full z-0"></div>
             <div className="rounded-full sm:border-2 p-8  md:flex  justify-center items-center hover:border-0 ">
               <div>
                 <div
@@ -279,268 +284,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="py-8">
-          <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
-            <h1 className="text-5xl font-bold border-b-4 pb-2 border-[#7918f7] ">
-              Projects
-            </h1>
-            <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
-          </div>
-          <div className="flex sm:justify-center md:justify-center lg:justify-evenly gap-5 flex-wrap px-5">
-            <div className="w-full sm:w-[480px] ">
-              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
-                <img
-                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
-                  src={Dominos}
-                  alt=""
-                />
-              </div>
-              <div className="ps-2 py-10">
-                <div className="flex gap-4 items-center">
-                  <h1 className="text-2xl font-semibold text-gray-700">
-                    Dominos Site (Modified){" "}
-                  </h1>
-                  <a
-                    className="font-semibold text-blue-700 "
-                    href="https://quiet-faloodeh-378fe9.netlify.app/
-
-"
-                  >
-                    <FaLink />
-                  </a>
-                </div>
-                <h2 className="text-lg font-semibold text-gray-700 pt-2">
-                  (It's a pizza-ordering website similar to Dominos, but with
-                  some modifications. This project was made with React JS and
-                  CSS.)
-                </h2>
-              </div>
-            </div>
-            <div className="w-full sm:w-[480px] ">
-              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
-                <img
-                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
-                  src={AnimeQuiz}
-                  alt=""
-                />
-              </div>
-              <div className="ps-2 py-10">
-                <div className="flex gap-4 items-center">
-                  <h1 className="text-2xl font-semibold text-gray-700">
-                    Kid Quiz Game
-                  </h1>
-                  <a
-                    className="font-semibold text-blue-700"
-                    href="https://ubiquitous-cuchufli-711b3b.netlify.app
-"
-                  >
-                    <FaLink />
-                  </a>
-                </div>
-                <h2 className="text-lg font-semibold text-gray-700 pt-2">
-                  ("It's an Anime Quiz game for kids that has been created using
-                  JavaScript, HTML, and CSS.")
-                </h2>
-              </div>
-            </div>
-            <div className="w-full sm:w-[480px] ">
-              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
-                <img
-                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
-                  src="https://res.cloudinary.com/dbxcernxw/image/upload/v1681220338/Mridul.Tech/Snaps/Netflix_clone_1_bi6xga.webp"
-                  alt=""
-                />
-              </div>
-              <div className="ps-2 py-10">
-                <div className="flex gap-4 items-center">
-                  <h1 className="text-2xl font-semibold text-gray-700">
-                    Netflix Clone
-                  </h1>
-                  <a
-                    className="font-semibold text-blue-700"
-                    href="https://github.com/Ashish-Kaintura/Netflix-clone-frontend
-"
-                  >
-                    <FaLink />
-                  </a>
-                </div>
-                <h2 className="text-lg font-semibold text-gray-700 pt-2">
-                  ( In this project, I used React.js for the front end or CSS
-                  for Styling, and Node.js, Express.js, and MongoDB for the back
-                  end. The project was deployed on GitHub and Render.)
-                </h2>
-              </div>
-            </div>
-            <div className="w-full sm:w-[480px] ">
-              <div className="w-full sm:w-[480px] h-72 rounded-2xl p-10 overflow-hidden background-container ">
-                <img
-                  className=" rounded-2xl grayscale hover:grayscale-0 transition-all ease-in duration-200"
-                  src={Sonrash}
-                  alt=""
-                />
-              </div>
-              <div className="ps-2 py-10">
-                <div className="flex items-center gap-4">
-                  <h1 className="text-2xl font-semibold text-gray-700">
-                    Clothing Site{" "}
-                  </h1>
-                  <a
-                    className="font-semibold text-blue-700 "
-                    href="https://dashing-macaron-e493a8.netlify.app/
-"
-                  >
-                    <FaLink />
-                  </a>
-                </div>
-                <h2 className="text-lg font-semibold text-gray-700 pt-2">
-                  (This is a Designer Clothing Site that was created using HTML,
-                  CSS, and JavaScript)
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="w-full h-40 flex items-center justify-center cursor-pointer">
-              <div className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-[whitesmoke] dark:bg-gray-700 dark:text-white dark:hover:text-gray-200 dark:shadow-none group">
-                <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
-                <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    fill="none"
-                    className="w-5 h-5 text-green-400"
-                  >
-                    <path
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      strokeWidth="2"
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    fill="none"
-                    className="w-5 h-5 text-green-400"
-                  >
-                    <path
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      strokeWidth="2"
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                    ></path>
-                  </svg>
-                </span>
-                <Link to="/Projects">
-                  <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-                    Know More
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="h-[100vh] relative items-center justify-center flex ">
-          <div className=" absolute top-0 inset-0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-              <path
-                fill="#7918f7"
-                fillOpacity="1"
-                d="M0,320L48,282.7C96,245,192,171,288,117.3C384,64,480,32,576,16C672,0,768,0,864,0C960,0,1056,0,1152,21.3C1248,43,1344,85,1392,106.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-              ></path>
-            </svg>
-          </div>
-          <div className=" absolute top-[35%] right-28 lg:flex  md:flex sm:flex hidden">
-            <svg
-              className="w-96 opacity-85"
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill="#7918F7"
-                d="M45.9,-26.8C56.6,-8.1,60.2,14.3,51.3,32C42.5,49.6,21.3,62.3,-0.2,62.5C-21.7,62.6,-43.5,50.1,-57,29.8C-70.4,9.5,-75.7,-18.6,-64.8,-37.4C-53.9,-56.2,-27,-65.6,-4.6,-63C17.7,-60.3,35.3,-45.4,45.9,-26.8Z"
-                transform="translate(100 100)"
-              />
-            </svg>
-          </div>
-          <div>
-            <div className="pt-20 pb-10  flex ps-5 items-center gap-2 text-center justify-center z-10">
-              <h1 className="text-5xl text-gray-800  font-bold border-b-4 pb-2 border-[#7918f7] z-10 ">
-                Experience
-              </h1>
-              <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
-            </div>
-            <div className="flex justify-center ">
-              <div className="flex justify-between gap-5">
-                <div className="h-96 w-1 rounded-sm bg-[#7918f7] "></div>
-                <div className="flex sm:gap-6 gap-4">
-                  <div>
-                    <h1 className=" font-semibold text-gray-800 text-2xl">
-                      Risezonic :
-                    </h1>
-                    <h1 className=" font-semibold text-gray-800 text-sm">
-                      India, New Delhi
-                    </h1>
-                  </div>
-                  <div className="z-10">
-                    <h1 className=" font-semibold text-gray-800 sm:text-lg md:text-xl lg:text-2xl">
-                      Front End Web Developer
-                    </h1>
-                    <h1 className=" font-semibold text-gray-800 text-sm">
-                      2023 - Now
-                    </h1>
-                    <div className="z-10">
-                      <p className="text-sm z-10">
-                        As a Front End Web Developer at Risezonic, I created{" "}
-                        <br />
-                        visually appealing and user-friendly websites. I <br />
-                        collaborated with the design and development teams to{" "}
-                        <br />
-                        ensure seamless integration of front-end and back-end{" "}
-                        <br />
-                        technologies. Leveraging my HTML, CSS, JavaScript, and{" "}
-                        <br />
-                        ReactJs, etc knowledge, I successfully delivered <br />
-                        projects that met client's expectations.
-                      </p>
-                    </div>
-                    <div className="pt-4 gap-4">
-                      <li className="sm:text-xl font-semibold text-gray-800">
-                        Developed responsive websites
-                      </li>
-                      <li className="sm:text-xl font-semibold text-gray-800">
-                        Deployment of Websites Management of cPanel
-                      </li>
-                      <li className="sm:text-xl font-semibold text-gray-800">
-                        Ensured clean, valid HTML and CSS markup conforming to
-                        industry standards.
-                      </li>
-                      <li className="sm:text-xl font-semibold text-gray-800">
-                        Brought mock-ups to life with HTML, CSS, and JavaScript.
-                      </li>
-                      <li className="sm:text-xl font-semibold text-gray-800">
-                        Participated in design reviews ensuring consistency
-                        between design intent and implementation
-                      </li>
-                      <li className="sm:text-xl font-semibold text-gray-800">
-                        Created successful websites that met requirements for
-                        objectives such as load speed and design.
-                      </li>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     <ProjectsSection/>
+      <ExperienceSection/>
       <section>
         <div className="py-5">
           <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
