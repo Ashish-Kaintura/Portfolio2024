@@ -38,7 +38,7 @@ export default function ExperienceSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
                     className="flex items-center gap-3 justify-center mb-16"
                 >
                     <h1 className="text-5xl text-gray-800 font-bold border-b-4 pb-2 border-[#7918f7]">

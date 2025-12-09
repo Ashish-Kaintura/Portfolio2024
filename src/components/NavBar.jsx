@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for menu toggle
-import logo from "../Logo/logo.png";
+import logo from "../Logo/ashish-kaintura-high-resolution-logo-black-transparent.png";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function NavBar() {
       <div className="flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
-          <img className="w-32" src={logo} alt="Logo" />
+          <img className="w-40" src={logo} alt="Logo" />
         </NavLink>
 
         {/* Hamburger Menu Button (Visible only on small screens) */}
