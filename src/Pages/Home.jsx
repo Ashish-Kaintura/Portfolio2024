@@ -97,13 +97,13 @@ export default function Home() {
           <div className="flex flex-wrap sm:justify-around justify-center sm:pt-32 pt-20 items-center p-5 ">
             <div className="z-10">
               <div>
-                <h1 className="text-xl font-semibold">
+                <h2 className="text-xl font-semibold">
                   {" "}
                   <span className="text-[#7918f7] font-semibold ">
                     Hey,
                   </span>{" "}
                   I'm Ashish 👋🏻{" "}
-                </h1>
+                </h2>
               </div>
               <div className="wrapper py-4 sm:w-96 sm:h-44 h-20 ">
                 <ul className="dynamic-txts">
@@ -115,7 +115,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="sm:text-3xl text-xl pb-4">
-                <p>I'm a developer based in Delhi, I'll help you build </p>
+                <h1>I'm a developer based in Delhi, I'll help you build </h1>
                 <p> beautiful websites your users will love.</p>
               </div>
               <div className="flex  gap-5 pt-5 ">
@@ -172,13 +172,13 @@ export default function Home() {
         <div className="sm:h-[80vh] h-[30vh] flex justify-center items-center pb-6 ">
           <div className="flex justify-center sm:pt-12 pt-10">
             <div className="  py-5 px-5 rounded-lg block">
-              <h1 className="text-center text-3xl font-semibold">
+              <h2 className="text-center text-3xl font-semibold">
                 <span className=" text-[#7918f7]"> Download </span> my resume by
                 clicking the download button.
-              </h1>
-              <h1 className="text-center text-3xl font-semibold">
+              </h2>
+              <h2 className="text-center text-3xl font-semibold">
                 And have Look
-              </h1>
+              </h2>
               <div className="flex justify-center pt-5">
                 <button
                   className="button"
@@ -218,9 +218,9 @@ export default function Home() {
               </svg>
             </div>
             <div className="pt-20 text-center flex justify-center items-center gap-2">
-              <h1 className="text-5xl font-bold border-b-4 pb-2 border-[#7918f7]">
+              <h2 className="text-5xl font-bold border-b-4 pb-2 border-[#7918f7]">
                 About Us
-              </h1>
+              </h2>
               <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-4"></div>
             </div>
             <div className=" justify-center pt-12 z-10 px-5 font-semibold">
@@ -289,131 +289,131 @@ export default function Home() {
       <section>
         <div className="py-5">
           <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
-            <h1 className="text-7xl font-bold border-b-4 pb-2 border-[#7918f7] ">
+            <h2 className="text-7xl font-bold border-b-4 pb-2 border-[#7918f7] ">
               Skills
-            </h1>
+            </h2>
             <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
           </div>
           <div className="px-5">
-            <h1 className=" font-semibold text-4xl text-gray-700 pb-6">
+            <h2 className=" font-semibold text-4xl text-gray-700 pb-6">
               Web Desgin
-            </h1>
+            </h2>
             <div className="flex flex-wrap overflow-hidden justify-evenly p-5 gap-4">
               <div className="flex items-center gap-2 text-2xl">
-                <h1>
+                <h2>
                   <img className="w-8" src={Uipng} alt="" />
-                </h1>
-                <h1 className=" font-semibold ">UI/UX Design</h1>
+                </h2>
+                <h2 className=" font-semibold ">UI/UX Design</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1>
+                <h2>
                   <img className="w-8" src={Responsive} alt="" />
-                </h1>
-                <h1 className=" font-semibold ">Responsive Design</h1>
+                </h2>
+                <h2 className=" font-semibold ">Responsive Design</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1>
+                <h2>
                   <img className="w-8" src={sketching} alt="" />
-                </h1>
-                <h1 className=" font-semibold ">Wireframing</h1>
+                </h2>
+                <h2 className=" font-semibold ">Wireframing</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1>
+                <h2>
                   <img className="w-8" src={figma} alt="" />
-                </h1>
-                <h1 className=" font-semibold ">Figma</h1>
+                </h2>
+                <h2 className=" font-semibold ">Figma</h2>
               </div>
             </div>
           </div>
           <div className="px-5 py-6">
-            <h1 className=" font-semibold text-4xl text-gray-700 pb-6">
+            <h2 className=" font-semibold text-4xl text-gray-700 pb-6">
               Front-End
-            </h1>
+            </h2>
             <div className="flex flex-wrap gap-4 overflow-hidden justify-around p-5 ">
               <div className="flex items-center gap-2 text-2xl">
-                <h1>
+                <h2>
                   <AiFillHtml5 className=" text-orange-600" />
-                </h1>
-                <h1 className=" font-semibold  ">HTML</h1>
+                </h2>
+                <h2 className=" font-semibold  ">HTML</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1>
+                <h2>
                   <IoLogoJavascript className=" text-yellow-500" />
-                </h1>
-                <h1 className=" font-semibold  ">Javascript</h1>
+                </h2>
+                <h2 className=" font-semibold  ">Javascript</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className=" text-blue-500">
+                <h2 className=" text-blue-500">
                   <FaCss3Alt />
-                </h1>
-                <h1 className=" font-semibold  ">CSS3</h1>
+                </h2>
+                <h2 className=" font-semibold  ">CSS3</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className=" text-indigo-800">
+                <h2 className=" text-indigo-800">
                   <RiReactjsLine />
-                </h1>
-                <h1 className=" font-semibold  ">ReactJS</h1>
+                </h2>
+                <h2 className=" font-semibold  ">ReactJS</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className="text-blue-400">
+                <h2 className="text-blue-400">
                   <SiTailwindcss />
-                </h1>
-                <h1 className=" font-semibold  ">Tailwind Css</h1>
+                </h2>
+                <h2 className=" font-semibold  ">Tailwind Css</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className=" text-indigo-700">
+                <h2 className=" text-indigo-700">
                   <DiBootstrap />
-                </h1>
-                <h1 className=" font-semibold  ">Bootstrape Css</h1>
+                </h2>
+                <h2 className=" font-semibold  ">Bootstrape Css</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1>
+                <h2>
                   <AiFillHtml5 />
-                </h1>
-                <h1 className=" font-semibold  ">Gsap</h1>
+                </h2>
+                <h2 className=" font-semibold  ">Gsap</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className="f text-blue-800">
+                <h2 className="f text-blue-800">
                   <SiNextdotjs />
-                </h1>
-                <h1 className=" font-semibold  ">Next.js</h1>
+                </h2>
+                <h2 className=" font-semibold  ">Next.js</h2>
               </div>
             </div>
           </div>
           <div className="px-5">
-            <h1 className=" font-semibold text-4xl text-gray-700 pb-6">
+            <h2 className=" font-semibold text-4xl text-gray-700 pb-6">
               Back-End
-            </h1>
+            </h2>
             <div className="flex flex-wrap gap-4 overflow-hidden justify-around p-5 ">
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className="text-green-800 text-4xl">
+                <h2 className="text-green-800 text-4xl">
                   <IoLogoNodejs />
-                </h1>
-                <h1 className=" font-semibold  ">NodeJs</h1>
+                </h2>
+                <h2 className=" font-semibold  ">NodeJs</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className="text-yellow-500">
+                <h2 className="text-yellow-500">
                   <SiExpress />
-                </h1>
-                <h1 className=" font-semibold  ">ExpressJs</h1>
+                </h2>
+                <h2 className=" font-semibold  ">ExpressJs</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className=" text-green-700">
+                <h2 className=" text-green-700">
                   <DiMongodb />
-                </h1>
-                <h1 className=" font-semibold  ">MongoDb</h1>
+                </h2>
+                <h2 className=" font-semibold  ">MongoDb</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className=" text-blue-700 text-4xl">
+                <h2 className=" text-blue-700 text-4xl">
                   <SiMysql />
-                </h1>
-                <h1 className=" font-semibold  ">MySQl</h1>
+                </h2>
+                <h2 className=" font-semibold  ">MySQl</h2>
               </div>
               <div className="flex items-center gap-2 text-2xl">
-                <h1 className=" text-blue-700 text-5xl">
+                <h2 className=" text-blue-700 text-5xl">
                   <DiPhp />
-                </h1>
-                <h1 className=" font-semibold  ">PHP</h1>
+                </h2>
+                <h2 className=" font-semibold  ">PHP</h2>
               </div>
             </div>
           </div>
@@ -422,9 +422,9 @@ export default function Home() {
       <section>
         <div className="p-8">
           <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
-            <h1 className="text-7xl font-bold border-b-4 pb-2 border-[#7918f7] ">
+            <h2 className="text-7xl font-bold border-b-4 pb-2 border-[#7918f7] ">
               My Story
-            </h1>
+            </h2>
             <div className=" w-3 h-3 bg-[#7918f7]  rounded-full mt-6"></div>
           </div>
           <div className="p-5">
