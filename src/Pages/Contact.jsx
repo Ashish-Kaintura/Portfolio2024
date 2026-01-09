@@ -120,7 +120,7 @@ const ContactPage = () => {
                                 whileHover={{ scale: 1.05, rotate: 2 }}
                                 className="relative"
                             >
-                                <span className="block bg-blue-600 text-white font-sans font-bold text-4xl md:text-6xl px-8 py-3 rounded-full transform -rotate-2 shadow-xl shadow-blue-600/30">
+                                <span className="block bg-[#A23FF8] text-white font-sans font-bold text-4xl md:text-6xl px-8 py-3 rounded-full transform -rotate-2 shadow-xl shadow-blue-600/30">
                                     Touch
                                 </span>
                             </motion.div>
@@ -202,7 +202,7 @@ const ContactPage = () => {
                                         whileTap={{ scale: 0.95 }}
                                         type="submit" // Changed to submit
                                         disabled={isSubmitting} // Disable while sending
-                                        className="w-full py-4 bg-[#CDEA65] text-slate-900 font-bold text-lg rounded-xl shadow-lg shadow-lime-500/20 hover:bg-[#d6ef75] transition-all flex items-center justify-center gap-2 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                                        className="w-full py-4 bg-[#A23FF8] text-slate-900 font-bold text-lg rounded-xl shadow-lg shadow-lime-500/20 hover:bg-[#d6ef75] transition-all flex items-center justify-center gap-2 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
                                         {isSubmitting ? (
                                             <>Sending... <Loader2 className="animate-spin" size={20} /></>
@@ -278,13 +278,13 @@ const ContactPage = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">Email Support</h3>
                             <p className="text-slate-500 text-sm mb-4">For general inquiries and renewal support.</p>
-                            <a href="mailto:info@smartskilllearning.com" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-                                info@smartskilllearning.com
+                            <a href="mailto:ashishkaintura305@gmail.com" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                                ashishkaintura305@gmail.com
                             </a>
                         </motion.div>
 
                         <motion.div whileHover={{ y: -10 }} className="p-8 rounded-[2rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50">
-                            <div className="w-14 h-14 bg-lime-100 text-lime-700 rounded-2xl flex items-center justify-center mb-6">
+                            <div className="w-14 h-14 bg-lime-100 text-[#A23FF8] rounded-2xl flex items-center justify-center mb-6">
                                 <Clock size={28} strokeWidth={1.5} />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">Support Hours</h3>

@@ -56,7 +56,7 @@ export default function Projects() {
     <div className="min-h-screen text-white">
       {/* Hero */}
       <section className="h-[55vh] flex items-center justify-center relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/60 via-fuchsia-600/40 to-indigo-500/60 bg-center  bg-cover  bg-no-repeat"
+        <div className="absolute inset-0 bg-gradient-to-br from-[#A23FF8]/60 via-fuchsia-600/40 to-indigo-500/60 bg-center  bg-cover  bg-no-repeat"
           style={{ backgroundImage:"url(https://i.postimg.cc/nrHysDgw/projects-banner.png)"}} />
         {/* <h1 className="relative text-5xl md:text-7xl font-extrabold">
           My Projects
@@ -102,7 +102,7 @@ export default function Projects() {
                 </div>
 
                 <div className="p-5">
-                  <h3 className="text-xl font-bold text-center text-indigo-400">
+                  <h3 className="text-xl font-bold text-center text-[#A23FF8]">
                     {project.title}
                   </h3>
 
@@ -122,7 +122,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="w-full py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 transition flex items-center justify-center gap-2">
+                    <button className="w-full py-2 rounded-xl bg-[#A23FF8] hover:bg-[#942eec] transition flex items-center justify-center gap-2">
                       Visit <ExternalLink size={16} />
                     </button>
                   </a>
@@ -138,7 +138,7 @@ export default function Projects() {
               key={i}
               onClick={() => setCurrentPage(i + 1)}
               className={`px-4 py-2 rounded-lg font-semibold transition ${currentPage === i + 1
-                  ? "bg-indigo-600"
+                  ? "bg-[#A23FF8]"
                   : "bg-neutral-800 hover:bg-neutral-700"
                 }`}
             >
