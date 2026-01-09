@@ -2,7 +2,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Glass card with stronger contrast */
+.glass-card {
+  @apply bg-[#0b0f1a]/90 backdrop-blur-xl border border-white/15 rounded-2xl p-8 shadow-2xl;
+}
 
+/* Section title */
+.section-title {
+  @apply text-2xl font-bold text-white border-b border-white/20 pb-3;
+}
+
+/* Normal paragraph text */
+.resume-text {
+  @apply text-gray-200 leading-relaxed;
+}
+
+/* Muted text (dates etc.) */
+.resume-muted {
+  @apply text-gray-400;
+}
+
+.pdf-mode .glass-card {
+  background: #0b0f1a !important;
+  color: #ffffff !important;
+}
+
+.pdf-mode span,
+.pdf-mode p,
+.pdf-mode li {
+  color: #e5e7eb !important;
+}
 * {
   font-family: 'Questrial', sans-serif;
   scroll-behavior: smooth;

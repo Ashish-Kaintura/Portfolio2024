@@ -1,253 +1,148 @@
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import React from "react";
-import NavBar from "../components/NavBar";
-import { useRef, useEffect, useState } from "react";
-import "../css/About.css";
+import { motion } from "framer-motion";
 import { CiStar } from "react-icons/ci";
-import Form from "../components/form";
+import NavBar from "../components/NavBar"; // Ensure this path is correct
+import Form from "../components/form"; // Ensure this path is correct
+// import "../css/About.css"; // You can likely remove this if it only contained the old slider logic
+
+// Data for the stack to clean up the JSX
+const skills = [
+  "HTML/CSS", "React JS", "JavaScript", "Tailwind CSS", "Next JS",
+  "Bootstrap", "React Native", "Node JS", "Express JS", "MySQL",
+  "MongoDB", "PHP", "UX/UI Design", "Figma", "Adobe XD"
+];
+
+// Animation Variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
 export default function About() {
-  const sliderRef = useRef(null);
-  // Function to handle scrolling the slider towards the right
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (sliderRef.current) {
-        sliderRef.current.scrollBy({ left: 2, behavior: "smooth" });
-        const lastItem =
-          sliderRef.current.children[sliderRef.current.children.length - 1];
-        if (
-          lastItem.getBoundingClientRect().right <=
-          sliderRef.current.getBoundingClientRect().right
-        ) {
-          sliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
-        }
-      }
-    }, 50); // Adjust the interval as needed
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <>
-      <NavBar />
-      <main>
-        <section>
-          <div className="h-[100vh] px-8 pt-20  ">
-            <div>
-              <h1 className="text-9xl font-semibold text-gray-700">
-                About me.
-              </h1>
-              <h2 className="text-2xl border-l-8 border-[#9064F7] ps-4">
-                Developing beautiful and functional websites is what I love
-                doing, and that's why I give my all in every <br />
-                new challenge.
-              </h2>
-            </div>
-            <div className="pt-8">
-              <div>
-                <h1 className="font-semibold text-lg text-gray-700">
-                  My Stack.
-                </h1>
+      {/* <NavBar /> Add this back if needed */}
+      <main className="overflow-x-hidden">
+        
+        {/* HERO SECTION */}
+        <section className="h-[100vh] px-8 pt-20 flex flex-col justify-center">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+          >
+            <motion.h1 
+              variants={fadeInUp} 
+              className="text-9xl font-semibold text-gray-700"
+            >
+              About me.
+            </motion.h1>
+            <motion.h2 
+              variants={fadeInUp} 
+              className="text-2xl border-l-8 border-[#9064F7] ps-4 mt-6"
+            >
+              Developing beautiful and functional websites is what I love
+              doing, and that's why I give my all in every <br />
+              new challenge.
+            </motion.h2>
+          </motion.div>
+
+          {/* STACK SECTION (Infinite Marquee) */}
+          <motion.div 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            transition={{ delay: 0.5, duration: 1 }}
+            className="pt-16"
+          >
+            <h1 className="font-semibold text-lg text-gray-700 mb-6">
+              My Stack.
+            </h1>
+            
+            <div className="w-full max-w-[25rem] h-64 bg-gray-400 rounded-2xl overflow-hidden p-4 flex flex-col justify-center shadow-2xl mx-0">
+              {/* Marquee Wrapper */}
+              <div className="flex overflow-hidden relative w-full">
+                <motion.div 
+                  className="flex gap-4 whitespace-nowrap"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{
+                    repeat: Infinity,
+                    ease: "linear",
+                    duration: 10, // Adjust speed here (lower is faster)
+                  }}
+                >
+                  {/* We duplicate the list twice to create a seamless loop */}
+                  {[...skills, ...skills].map((skill, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className="px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl flex items-center shadow-lg">
+                        {skill}
+                      </div>
+                      <div className="text-indigo-700 text-3xl font-semibold">
+                        <CiStar />
+                      </div>
+                    </div>
+                  ))}
+                </motion.div>
               </div>
-              <div className="w-[25rem] h-64 bg-gray-400 rounded-2xl mt-6 overflow-hidden p-4 flex flex-col justify-center gap-y-8 items-center shadow-2xl ">
-                <div className="container ">
-                  <div className="content gap-x-2" ref={sliderRef}>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Html/Css </h1>
+              
+              {/* Second Row (Moving Reverse) - Optional, simpler to just have one cool one, but here is a second row logic if you want variety */}
+              <div className="flex overflow-hidden relative w-full mt-8">
+                 <motion.div 
+                  className="flex gap-4 whitespace-nowrap"
+                  animate={{ x: ["-50%", "0%"] }}
+                  transition={{
+                    repeat: Infinity,
+                    ease: "linear",
+                    duration: 12, 
+                  }}
+                >
+                  {[...skills, ...skills].reverse().map((skill, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className="px-3 py-2 text-white text-lg uppercase bg-gray-800 rounded-2xl flex items-center shadow-lg">
+                        {skill}
+                      </div>
+                      <div className="text-indigo-700 text-3xl font-semibold">
+                        <CiStar />
+                      </div>
                     </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">React JS</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Java Script</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">
-                        Tailwind Css
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Next Js</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Bootstrape</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">
-                        React Native
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-                <div className="container">
-                  <div className="content2 gap-x-2" ref={sliderRef}>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Node Js</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Express Js</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">My SQL</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Mongo DB</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">PHP</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Java Script</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Node JS</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-                <div className="container">
-                  <div className="content gap-x-2" ref={sliderRef}>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">
-                        UX/UI Desgin
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Responsive</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">Figma</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">HTML/Css</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">AdoveXD</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">FIgma</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-lg uppercase bg-gray-900 rounded-2xl item flex">
-                      <h1 className="flex items-center gap-x-2">UX/UI</h1>
-                    </div>
-                    <div className=" px-3 py-2 text-white text-xl uppercase  rounded-2xl flex">
-                      <h1 className="flex items-center gap-x-2">
-                        <CiStar className="text-indigo-700 text-3xl font-semibold" />{" "}
-                      </h1>
-                    </div>
-                  </div>
-                </div>
+                  ))}
+                </motion.div>
               </div>
+
             </div>
-          </div>
+          </motion.div>
         </section>
-        <Form/>
+
+        <Form />
+
+        {/* MY STORY SECTION */}
         <section className="mb-4 px-6 justify-center">
-          <div className=" p-5 ">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
+            className="p-5"
+          >
             <div>
               <h1 className="text-6xl font-semibold py-5">My Story.</h1>
             </div>
             <div>
-              <p className="text-lg">
+              <p className="text-lg leading-relaxed text-gray-800">
                 In 2023, I started my journey as a Front-End Developer at
                 Risezonic. With a Bachelor's degree and a Diploma in Software
                 Engineering from NIIT, I dove into mastering HTML, CSS,
@@ -260,58 +155,68 @@ export default function About() {
                 <br /> Now, I'm eager for new opportunities to grow and make a
                 difference wherever my career takes me. I'm committed to pushing
                 my limits, embracing challenges, and striving for success in
-                everything I do.💜
+                everything I do. 💜
               </p>
             </div>
-          </div>
+          </motion.div>
         </section>
-        <section className="mb-4 px-6 justify-center">
-          <div className=" p-5 ">
-            <div>
-              <h1 className="text-6xl font-semibold py-5">My experience</h1>
-            </div>
 
-            <div className="flex gap-x-6 text-6xl font-semibold mt-8">
-              <h2 className="font-bold pr-6 text-7xl">01</h2>
-              <h3 className="text-lg text-indigo-500 font-normal ps-6">
-                Frontend Developer <br />
-                <span className="text-5xl font-semibold text-gray-950">
-                  Risezonic
-                </span>{" "}
-                <p className="mt-4 text-black">
+        {/* EXPERIENCE SECTION */}
+        <section className="mb-20 px-6 justify-center">
+          <div className="p-5">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-6xl font-semibold py-5">My experience</h1>
+            </motion.div>
+
+            <motion.div 
+              className="flex gap-x-6 mt-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={staggerContainer}
+            >
+              <h2 className="font-bold pr-6 text-7xl text-gray-300">01</h2>
+              
+              <div className="w-full">
+                <h3 className="text-lg text-indigo-500 font-normal">
+                  Frontend Developer <br />
+                  <span className="text-5xl font-semibold text-gray-950 block mt-2">
+                    Risezonic
+                  </span>
+                </h3>
+                
+                <p className="mt-4 text-gray-700 text-lg max-w-4xl">
                   As a Front End Web Developer at Risezonic, I created visually
                   appealing and user-friendly websites. I collaborated with the
                   design and development teams to ensure seamless integration of
-                  front-end and back-end technologies. Leveraging my HTML, CSS,
-                  JavaScript, and ReactJs, etc knowledge, I successfully
-                  delivered projects that met client's expectations.
+                  front-end and back-end technologies.
                 </p>
-                <div className="pt-4 gap-4">
-                  <li className=" text-gray-800">
-                    Developed responsive websites
-                  </li>
-                  <li className=" text-gray-800">
-                    Deployment of Websites Management of cPane
-                  </li>
-                  <li className=" text-gray-800">
-                    Ensured clean, valid HTML and CSS markup conforming to
-                    industry standards.
-                  </li>
-                  <li className=" text-gray-800">
-                    Brought mock-ups to life with HTML, CSS, and JavaScript.
-                  </li>
-                  <li className=" text-gray-800">
-                    Participated in design reviews ensuring consistency between
-                    design intent and implementation
-                  </li>
-                  <li className=" text-gray-800">
-                    Created successful websites that met requirements for
-                    objectives such as load speed and design.
-                  </li>
-                </div>
-              </h3>
-              <br />
-            </div>
+
+                <ul className="pt-6 grid grid-cols-1 gap-4">
+                  {[
+                    "Developed responsive websites",
+                    "Deployment of Websites Management of cPanel",
+                    "Ensured clean, valid HTML and CSS markup conforming to industry standards.",
+                    "Brought mock-ups to life with HTML, CSS, and JavaScript.",
+                    "Participated in design reviews ensuring consistency between design intent and implementation",
+                    "Created successful websites that met requirements for objectives such as load speed and design."
+                  ].map((item, index) => (
+                    <motion.li 
+                      key={index}
+                      variants={fadeInUp}
+                      className="text-gray-800 list-disc list-inside hover:text-indigo-600 transition-colors duration-300"
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
           </div>
         </section>
       </main>

@@ -1,0 +1,275 @@
+[
+    {
+        "title": "Risezonic Travel",
+        "img": "/images/risezonictravel.png",
+        "url": "https://www.risezonictravel.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "EmailJS"
+        ]
+    },
+    {
+        "title": "Punarnava",
+        "img": "/images/punarnava.png",
+        "url": "https://thepunarnava.com/",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "Tailwind CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Malani Marble",
+        "img": "https://i.postimg.cc/fyWw4L79/Screenshot_2026_01_09_221734.png",
+        "url": "https://www.malanimarbles.com/",
+        "technologies": [
+            "React JS",
+            "framer Motion",
+            "Tailwind CSS",
+            "Css"
+        ]
+    },
+    {
+        "title": "Smart skill learning ",
+        "img": "https://i.postimg.cc/KjcZXz7t/Screenshot_2026_01_09_221722.png",
+        "url": "https://smartskilllearning.com/",
+        "technologies": [
+            "React JS",
+            "framer Motion",
+            "Tailwind CSS",
+            "Css",
+            "Razorpay",
+            "Paypal"
+        ]
+    },
+    {
+        "title": "Star Alliance Aviation. ",
+        "img": "https://i.postimg.cc/d3QqM1Rr/Screenshot_2026_01_09_221852.png",
+        "url": "https://www.starallianceaviation.com/",
+        "technologies": [
+            "React JS",
+            "framer Motion",
+            "Tailwind CSS",
+            "Css"
+        ]
+    },
+    {
+        "title": "Travelo sun",
+        "img": "https://i.postimg.cc/yx6VqdhF/Screenshot_2026_01_09_222025.png",
+        "url": "https://travelosun.com/",
+        "technologies": [
+            "React JS",
+            "framer Motion",
+            "Tailwind CSS",
+            "Razorpay",
+            "node",
+            "Express JS",
+            "Mongo DB"
+        ]
+    },
+    {
+        "title": "Hedge Funds Brijsharma",
+        "img": "https://i.postimg.cc/qqBkfRcX/Screenshot_2026_01_09_222447.png",
+        "url": "https://hedge-funds.brijsharma.in/",
+        "technologies": [
+            "React JS",
+            "framer Motion",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "title": "Brij Properties",
+        "img": "https://i.postimg.cc/Wzp2R3mG/Screenshot_2026_01_09_222230.png",
+        "url": "https://brijproperties.in/",
+        "technologies": [
+            "React JS",
+            "framer Motion",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "title": "Ai.risezonic",
+        "img": "https://i.postimg.cc/prV2NTQ8/Screenshot_2026_01_09_221818.png",
+        "url": "https://ai.risezonic.com/",
+        "technologies": [
+            "React JS",
+            "framer Motion",
+            "Tailwind CSS",
+            "Css"
+        ]
+    },
+    {
+        "title": "Frist Class Flight",
+        "img": "https://i.postimg.cc/dtP0tsqS/Screenshot_2026_01_09_225218.png",
+        "url": "https://super-alpaca-a63ea6.netlify.app/",
+        "technologies": [
+            "UNDER CONSTRUCTION"
+        ]
+    },
+    {
+        "title": "Air Ticket Booking ",
+        "img": "https://i.postimg.cc/D0f2VZQQ/Screenshot_2026_01_09_222709.png",
+        "url": "https://airlinesticketbooking.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "framer Motion"
+        ]
+    },
+    {
+        "title": "Devrana Hotel",
+        "img": "https://i.postimg.cc/BbZqW65B/Screenshot_2026_01_09_222825.png",
+        "url": "https://www.devrana.in/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "EmailJS",
+            "framer Motion",
+            "Razorpay"
+        ]
+    },
+    {
+        "title": "Amtrek",
+        "img": "https://i.postimg.cc/6TsY27H3/Screenshot-2026-01-09-224600.png",
+        "url": "https://starlit-sunflower-45d055.netlify.app/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "css"
+        ]
+    },
+    {
+        "title": "Multitec Tools",
+        "img": "/images/multitec.png",
+        "url": "https://multitectools.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "EmailJS"
+        ]
+    },
+    {
+        "title": "Frozit",
+        "img": "/images/frozit.png",
+        "url": "https://www.frozit.in/",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Loop & Cut",
+        "img": "/images/loopandcut.png",
+        "url": "https://www.loopandcut.in/",
+        "technologies": [
+            "Shopify"
+        ]
+    },
+    {
+        "title": "GoldVine",
+        "img": "/images/goldvine.png",
+        "url": "https://www.thegoldvine.com/",
+        "technologies": [
+            "Shopify"
+        ]
+    },
+    {
+        "title": "LookflyDesk",
+        "img": "/images/lookflydesk.png",
+        "url": "https://lookflydesk.com/",
+        "technologies": [
+            "HTML",
+            "Tailwind CSS",
+            "MySQL"
+        ]
+    },
+    {
+        "title": "CRM Pannle",
+        "img": "https://i.postimg.cc/wxsvpydC/Screenshot_2026_01_09_225619.png",
+        "url": "https://taupe-otter-876b6f.netlify.app/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "Node",
+            "Express JS",
+            "Mongo DB"
+        ]
+    },
+    {
+        "title": "Acart",
+        "img": "/images/acart.png",
+        "url": "https://akartbyashish.netlify.app/",
+        "technologies": [
+            "Vite JS",
+            "Tailwind CSS",
+            "Firebase",
+            "Razorpay"
+        ]
+    },
+    {
+        "title": "J&S Insurance",
+        "img": "/images/jandsinsurance.png",
+        "url": "https://www.jsinsur.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "Node JS",
+            "Express JS",
+            "MySQL"
+        ]
+    },
+    {
+        "title": "SkyWorld Tour Corp",
+        "img": "/images/skyworldtour.png",
+        "url": "https://skyworldtourcorp.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "title": "Krade Uae",
+        "img": "https://i.postimg.cc/qMV7MJkF/Screenshot_2026_01_09_225142.png",
+        "url": "https://kraduae.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "framer Motion",
+            "Still Building"
+        ]
+    },
+    {
+        "title": "Veneasy",
+        "img": "/images/veneasy.png",
+        "url": "https://veneasy.in/",
+        "technologies": [
+            "WordPress"
+        ]
+    },
+    {
+        "title": "Sonrash By Sona",
+        "img": "/images/sonrash.png",
+        "url": "http://sonrashbysona.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "title": "Risezonic",
+        "img": "/images/risezonic.png",
+        "url": "https://www.risezonic.com/",
+        "technologies": [
+            "React JS",
+            "Tailwind CSS",
+            "framer Motion",
+            "node",
+            "Express JS",
+            "Mongo DB"
+        ]
+    }
+]

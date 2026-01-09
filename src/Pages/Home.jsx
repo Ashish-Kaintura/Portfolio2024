@@ -91,7 +91,7 @@ export default function Home() {
   return (
     <>
       {/* #7918f7 */}
-      <NavBar />
+
       <section>
         <div className="sm:h-[95vh] h-[80vh] relative">
           <div className="flex flex-wrap sm:justify-around justify-center sm:pt-32 pt-20 items-center p-5 ">
@@ -284,8 +284,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-     <ProjectsSection/>
-      <ExperienceSection/>
+      <ProjectsSection />
+      <ExperienceSection />
       <section>
         <div className="py-5">
           <div className="pt-20 pb-10  flex ps-5 items-center gap-2">
