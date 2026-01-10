@@ -26,7 +26,7 @@ import ProjectsSection from "../components/Projectsection";
 import ExperienceSection from "../components/ExperienceSection";
 export default function Home() {
   const downloadResume = () => {
-    const resumeData = "'/resume/Ashish Kaintura Resume 2025.docx';";
+    const resumeData = "https://docs.google.com/document/d/1rYtq5Iwdf150K-wtIUaq5V1fax6M0sY2/edit?usp=drive_link&ouid=100550602252589415449&rtpof=true&sd=true";
     try {
       const blob = new Blob([resumeData], { type: "application/dox" });
       const url = URL.createObjectURL(blob);
@@ -88,6 +88,9 @@ export default function Home() {
   //     clearInterval(typingInterval);
   //   };
   // }, [index]);
+  // useEffect(() => {
+  //   window.scroll(0, 0)
+  // })
   return (
     <>
       {/* #7918f7 */}
@@ -168,39 +171,33 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="sm:h-[80vh] h-[30vh] flex justify-center items-center pb-6 ">
-          <div className="flex justify-center sm:pt-12 pt-10">
-            <div className="  py-5 px-5 rounded-lg block">
-              <h2 className="text-center text-3xl font-semibold">
-                <span className=" text-[#7918f7]"> Download </span> my resume by
-                clicking the download button.
-              </h2>
-              <h2 className="text-center text-3xl font-semibold">
-                And have Look
-              </h2>
-              <div className="flex justify-center pt-5">
-                <button
-                  className="button"
-                  type="button "
-                  onClick={downloadResume}
+      {/* --- RESUME SECTION --- */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto bg-gray-50 rounded-3xl p-8 md:p-12 shadow-inner border border-gray-100 text-center">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+              <span className="text-[#7918f7]">Download</span> my resume?
+            </h2>
+            <p className="text-gray-500 mb-8 text-lg">
+              Click the button below to grab a copy of my CV and have a look.
+            </p>
+
+            <div className="flex justify-center">
+              <button
+                type="button"
+                onClick={downloadResume}
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#7918f7] text-white rounded-xl font-bold text-lg shadow-lg shadow-purple-500/30 hover:bg-[#6a15d8] hover:shadow-purple-500/50 transition-all active:scale-95"
+              >
+                <span>Download CV</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6 group-hover:translate-y-1 transition-transform"
                 >
-                  <span className="button__text">Download</span>
-                  <span className="button__icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 35 35"
-                      id="bdd05811-e15d-428c-bb53-8661459f9307"
-                      data-name="Layer 2"
-                      className="svg"
-                    >
-                      <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
-                      <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
-                      <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
-                    </svg>
-                  </span>
-                </button>
-              </div>
+                  <path fillRule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

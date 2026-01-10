@@ -52,7 +52,9 @@ export default function Resume() {
     }, 1000);
 
   };
-
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
   return (
     <>
 

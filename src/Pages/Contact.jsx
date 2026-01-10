@@ -90,7 +90,9 @@ const ContactPage = () => {
                 setStatus('error');
             });
     };
-
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
     return (
         <div className="min-h-screen pt-20 font-sans selection:bg-lime-200 selection:text-slate-900 overflow-x-hidden bg-[#f8f9fc]">
 
@@ -289,8 +291,8 @@ const ContactPage = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">Support Hours</h3>
                             <p className="text-slate-500 text-sm leading-relaxed">
-                                Mon-Fri: 9AM - 6PM<br />
-                                Sat: 10AM - 2PM
+                                Mon-Fri: 7PM - 10PM<br />
+                                Sat-Sun: 10AM - 2PM
                             </p>
                         </motion.div>
 
@@ -318,15 +320,30 @@ const ContactPage = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-4xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                        <h2 className="text-4xl font-bold text-slate-900">
+                            Frequently Asked Questions
+                        </h2>
                         <div className="h-1.5 w-24 bg-[#CDEA65] rounded-full mx-auto mt-6" />
                     </motion.div>
 
                     <div className="space-y-4">
                         {[
-                            { q: "How fast is the PMP renewal process?", a: "Once you submit your details, our team typically processes the PDUs within 24-48 hours." },
-                            { q: "Do I need to take an exam for renewal?", a: "No. Our renewal programs are based on Continuing Education units (PDUs/CPEs). No exams required." },
-                            { q: "Is Smart Skill Learning affiliated with PMI?", a: "We are an independent training provider ensuring our courses align with CCR guidelines." }
+                            {
+                                q: "How long does it take to build a website?",
+                                a: "It depends on the complexity. A simple landing page typically takes 3-5 days, while a full multi-page website or web app can take 2-4 weeks to complete.",
+                            },
+                            {
+                                q: "Will my website be mobile-friendly?",
+                                a: "Absolutely! I follow a mobile-first approach, ensuring your website looks stunning and functions perfectly on all devices, from smartphones to desktops.",
+                            },
+                            {
+                                q: "Do you provide support after the site is launched?",
+                                a: "Yes, I offer 4 weeks of free support post-launch to fix any bugs or minor adjustments. I also offer long-term maintenance packages if you need ongoing updates.",
+                            },
+                            {
+                                q: "What do you need from me to get started?",
+                                a: "I usually need a brief overview of your project goals, any design preferences or examples you like, and the content (text/images) you want on the site.",
+                            },
                         ].map((faq, i) => (
                             <motion.div
                                 key={i}
@@ -337,7 +354,9 @@ const ContactPage = () => {
                                 className="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 transition-all hover:bg-white hover:shadow-lg"
                             >
                                 <h4 className="font-bold text-lg text-slate-900 mb-3 flex items-start gap-3">
-                                    <span className="text-blue-500 mt-1"><MessageSquare size={20} /></span>
+                                    <span className="text-blue-500 mt-1">
+                                        <MessageSquare size={20} />
+                                    </span>
                                     {faq.q}
                                 </h4>
                                 <p className="text-slate-600 ml-8 leading-relaxed">{faq.a}</p>

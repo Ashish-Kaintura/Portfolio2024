@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { CiStar } from "react-icons/ci";
 import NavBar from "../components/NavBar"; // Ensure this path is correct
@@ -16,8 +16,8 @@ const skills = [
 // Animation Variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.6, ease: "easeOut" }
   }
@@ -34,11 +34,16 @@ const staggerContainer = {
 };
 
 export default function About() {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
+
   return (
     <>
       {/* <NavBar /> Add this back if needed */}
       <main className="overflow-x-hidden">
-        
+
         {/* HERO SECTION */}
         <section className="h-[100vh] px-8 pt-20 flex flex-col justify-center">
           <motion.div
@@ -46,14 +51,14 @@ export default function About() {
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.h1 
-              variants={fadeInUp} 
+            <motion.h1
+              variants={fadeInUp}
               className="text-9xl font-semibold text-gray-700"
             >
               About me.
             </motion.h1>
-            <motion.h2 
-              variants={fadeInUp} 
+            <motion.h2
+              variants={fadeInUp}
               className="text-2xl border-l-8 border-[#9064F7] ps-4 mt-6"
             >
               Developing beautiful and functional websites is what I love
@@ -63,20 +68,20 @@ export default function About() {
           </motion.div>
 
           {/* STACK SECTION (Infinite Marquee) */}
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
             className="pt-16"
           >
             <h1 className="font-semibold text-lg text-gray-700 mb-6">
               My Stack.
             </h1>
-            
+
             <div className="w-full max-w-[25rem] h-64 bg-gray-400 rounded-2xl overflow-hidden p-4 flex flex-col justify-center shadow-2xl mx-0">
               {/* Marquee Wrapper */}
               <div className="flex overflow-hidden relative w-full">
-                <motion.div 
+                <motion.div
                   className="flex gap-4 whitespace-nowrap"
                   animate={{ x: ["0%", "-50%"] }}
                   transition={{
@@ -98,16 +103,16 @@ export default function About() {
                   ))}
                 </motion.div>
               </div>
-              
+
               {/* Second Row (Moving Reverse) - Optional, simpler to just have one cool one, but here is a second row logic if you want variety */}
               <div className="flex overflow-hidden relative w-full mt-8">
-                 <motion.div 
+                <motion.div
                   className="flex gap-4 whitespace-nowrap"
                   animate={{ x: ["-50%", "0%"] }}
                   transition={{
                     repeat: Infinity,
                     ease: "linear",
-                    duration: 12, 
+                    duration: 12,
                   }}
                 >
                   {[...skills, ...skills].reverse().map((skill, index) => (
@@ -131,7 +136,7 @@ export default function About() {
 
         {/* MY STORY SECTION */}
         <section className="mb-4 px-6 justify-center">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -173,7 +178,7 @@ export default function About() {
               <h1 className="text-6xl font-semibold py-5">My experience</h1>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="flex gap-x-6 mt-8"
               initial="hidden"
               whileInView="visible"
@@ -181,7 +186,7 @@ export default function About() {
               variants={staggerContainer}
             >
               <h2 className="font-bold pr-6 text-7xl text-gray-300">01</h2>
-              
+
               <div className="w-full">
                 <h3 className="text-lg text-indigo-500 font-normal">
                   Frontend Developer <br />
@@ -189,7 +194,7 @@ export default function About() {
                     Risezonic
                   </span>
                 </h3>
-                
+
                 <p className="mt-4 text-gray-700 text-lg max-w-4xl">
                   As a Front End Web Developer at Risezonic, I created visually
                   appealing and user-friendly websites. I collaborated with the
@@ -206,7 +211,7 @@ export default function About() {
                     "Participated in design reviews ensuring consistency between design intent and implementation",
                     "Created successful websites that met requirements for objectives such as load speed and design."
                   ].map((item, index) => (
-                    <motion.li 
+                    <motion.li
                       key={index}
                       variants={fadeInUp}
                       className="text-gray-800 list-disc list-inside hover:text-indigo-600 transition-colors duration-300"

@@ -51,7 +51,9 @@ export default function Projects() {
       );
     }
   }, [loading, currentPage]);
-
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
   return (
     <div className="min-h-screen text-white">
       {/* Hero */}

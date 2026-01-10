@@ -30,10 +30,10 @@ export default function ProjectsSection() {
             desc: "Star Alliance Aviation Academy is a premier aviation training institute (Mordern UI UX Animation React + vite Tailwind Css Framer motion",
         },
         {
-            title: "Designer Clothing Website",
-            img: Sonrash,
-            link: "https://dashing-macaron-e493a8.netlify.app/",
-            desc: "Made using HTML, CSS and JavaScript.",
+            title: "Smart Skill Learnig ",
+            img: "https://i.postimg.cc/KjcZXz7t/Screenshot_2026_01_09_221722.png",
+            link: "https://smartskilllearning.com/",
+            desc: "Made using React Js Tailwind css framer motion Razorpay,paypal Integrated ",
         },
     ];
 
