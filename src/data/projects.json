@@ -32,6 +32,17 @@
         ]
     },
     {
+        "title": "Coffee shop landing page. ",
+        "img": "https://i.postimg.cc/BQTCpsjT/Screenshot-2026-01-20-182415.png",
+        "url": "https://lodeur.netlify.app/",
+        "technologies": [
+            "React JS",
+            "GSAP",
+            "Css"
+         
+        ]
+    },
+    {
         "title": "Smart skill learning ",
         "img": "https://i.postimg.cc/KjcZXz7t/Screenshot_2026_01_09_221722.png",
         "url": "https://smartskilllearning.com/",
